@@ -15,6 +15,7 @@
         <Tab Title="Sobre">
             <ShellContent
                 ContentTemplate="{DataTemplate views:Sobre}" />
+            
         </Tab>
 
     </TabBar>
