@@ -4,7 +4,7 @@
              x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
              Title="ContratacaoHospedagem"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource Gray500}">
+             BackgroundColor="#FF69B4">
 
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
                          Padding="5"
@@ -13,7 +13,7 @@
         <Label Text="Cálculo da Diária"
                FontFamily="Kalam"
                FontSize="50"
-               TextColor="{StaticResource Secondary}" />
+               TextColor="Navy"></Label>
 
         <Frame Padding="10">
             <VerticalStackLayout>
@@ -58,7 +58,8 @@
                                TextColor="{StaticResource Tertiary}"/>
 
                         <Picker x:Name="pck_quarto"
-                                Title="Selecione sua Acomodação" />
+                                Title="Selecione sua Acomodação"
+                                ItemDisplayBinding="{Binding Descricao}"/>
                     </VerticalStackLayout>
                 </Frame>
 
@@ -74,6 +75,7 @@
                         <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Check-in:" />
                             <DatePicker x:Name="dtpck_checkin"
+                                        DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 
@@ -85,10 +87,8 @@
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar"  />
+                <Button Text="Avançar"  Clicked="Button_Clicked"/>
 
-                <Button Text="Sobre" />
-    
             </VerticalStackLayout>
                 
         </Frame>
