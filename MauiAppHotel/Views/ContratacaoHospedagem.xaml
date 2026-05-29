@@ -65,6 +65,7 @@
 
                 <Frame Padding="10"
                        Margin="10">
+
                     <VerticalStackLayout Spacing="10">
 
                         <Label Text="Período da Estadia"
@@ -87,7 +88,9 @@
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar"  Clicked="Button_Clicked"/>
+                <Button Text="Avançar"  
+                        HorizontalOptions="Center"
+                        Clicked="Button_Clicked"/>
 
             </VerticalStackLayout>
                 
